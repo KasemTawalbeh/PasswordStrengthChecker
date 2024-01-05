@@ -1,1 +1,1 @@
-# PasswordStrengthChecker
+# PassStrengthChecker  
