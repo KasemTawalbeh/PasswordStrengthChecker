@@ -107,5 +107,12 @@ if __name__ == "__main__":
         crack_time = estimate_crack_time(password, "medium")
         print(f"Strength: {strength}")
         print(f"Estimated Time to Crack: {crack_time:.2f} hours")
-    elif option == "2":
-        length = int(input("Enter password: "))
+   elif option == "2":
+        length = int(input("Enter password length: "))
+        complexity = input("Enter password complexity (low/medium/high): ")
+        random_password = generate_random_password(length, complexity)
+        crack_time = estimate_crack_time(random_password, complexity)
+        print(f"Generated Password: {random_password}")
+        print(f"Estimated Time to Crack: {crack_time:.2f} hours")
+    else:
+        print("Invalid option. Please choose 1 or 2.")
