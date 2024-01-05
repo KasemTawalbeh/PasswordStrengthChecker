@@ -50,6 +50,20 @@ def get_character_set_size(complexity):
     elif complexity == "high":
         return len(string.ascii_letters + string.digits + string.punctuation)
 
+def generate_random_password(length, complexity):
+    if complexity == 'low':
+        characters = string.ascii_letters
+    elif complexity == 'medium':
+        characters = string.ascii_letters + string.digits
+    elif complexity == 'high':
+        characters = string.ascii_letters + string.digits + string.punctuation
+    else:
+        print("Invalid complexity option")
+        return None
+
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
 if __name__ == "__main__":
     print("Choose an option:")
     print("1. Enter a password for strength checking")
