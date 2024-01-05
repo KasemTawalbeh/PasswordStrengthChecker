@@ -108,4 +108,4 @@ if __name__ == "__main__":
         print(f"Strength: {strength}")
         print(f"Estimated Time to Crack: {crack_time:.2f} hours")
     elif option == "2":
-        length = int(input("Enter password
+        length = int(input("Enter password: "))
